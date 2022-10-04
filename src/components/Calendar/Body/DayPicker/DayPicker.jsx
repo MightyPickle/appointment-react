@@ -16,9 +16,6 @@ export default function Days() {
 
   useEffect(() => {
     setDays(daysInMonth(chosenYear, chosenMonth));
-    if (chosenYear !== currDate.getFullYear() && chosenMonth !== currDate.getMonth()) {
-      setChosenDay(null);
-    }
   }, [chosenYear, chosenMonth]);
 
   return (

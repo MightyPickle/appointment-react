@@ -6,7 +6,7 @@ import Time from './components/Time/Time';
 
 function App() {
   const [theme, setTheme] = useState('light');
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   return (
     <ContextProvider>
       <div className={`App ${theme}`}>

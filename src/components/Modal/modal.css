@@ -1,0 +1,25 @@
+.modal,
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: hsla(0, 0%, 14%, 0.507);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.modal-body {
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    background-color: var(--bg-main);
+    border-radius: 10px;
+    font-size: 1.3rem;
+}

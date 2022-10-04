@@ -4,12 +4,13 @@ import TimeFooter from './Footer/TimeFooter';
 import TimeHeader from './Header/TimeHeader';
 import './time.css';
 
-export default function Time() {
+export default function Time({ setModal }) {
   return (
     <div className="timetable-container">
+
       <TimeHeader />
       <TimeBody />
-      <TimeFooter />
+      <TimeFooter setModal={setModal} />
     </div>
   );
 }

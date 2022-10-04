@@ -47,7 +47,12 @@ export function generateIntervals(year, month, day) {
   return result;
 }
 
-export function submitBooking(year, month, day, time) {
+export function toggleModal(setModal) {
+  setModal((prev) => !prev);
+}
+
+export function submitBooking(year, month, day, time, setSelectedTime, setModal) {
   const [hours, minutes] = time.split(':');
-  return new Date(year, month, day, hours, minutes);
+  toggleModal(setModal);
+  setSelectedTime((new Date(year, month, day, hours, minutes).toLocaleString('ru-Ru').slice(0, -3)));
 }

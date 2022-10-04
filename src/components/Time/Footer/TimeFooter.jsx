@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { submitBooking } from '../../../utils/timeHandlers';
 import { CalendarContext } from '../../context/CalendarContext';
 
-export default function TimeFooter() {
+export default function TimeFooter({ setModal }) {
   const {
     year, day, month, time, selected,
   } = useContext(CalendarContext);
@@ -14,8 +14,7 @@ export default function TimeFooter() {
 
   return (
     <div className="timetable-footer">
-      {selectedTime && <div>{selectedTime.toLocaleString('ru-Ru')}</div>}
-      <button type="button" onClick={() => setSelectedTime(submitBooking(chosenYear, chosenMonth, chosenDay, chosenTime))}>Записаться на консультацию</button>
+      <button type="button" onClick={() => submitBooking(chosenYear, chosenMonth, chosenDay, chosenTime, setSelectedTime, setModal)}>Записаться на консультацию</button>
     </div>
   );
 }

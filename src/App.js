@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import './App.css';
 import { ContextProvider } from './components/context/CalendarContext';
+import Modal from './components/Modal/Modal';
 import Time from './components/Time/Time';
 
 function App() {
   const [theme, setTheme] = useState('light');
-
+  const [modal, setModal] = useState(true);
   return (
     <ContextProvider>
       <div className={`App ${theme}`}>
-        <Time />
+        {modal && <Modal setModal={setModal} />}
+
+        <Time setModal={setModal} />
       </div>
     </ContextProvider>
   );

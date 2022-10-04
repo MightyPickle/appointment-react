@@ -1,0 +1,98 @@
+.timetable-container {
+    position: relative;
+    background-color: var(--bg-main);
+    height: max-content;
+    width: max(100% - 60vw, 34.375rem);
+    min-width: fit-content;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.timetable-header,
+.timetable-body {
+    padding: 1rem;
+}
+
+.timetable-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-service);
+    color: var(--white);
+    border-radius: 5px 5px 0 0;
+    font-size: 2rem;
+}
+
+.timetable-body {
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.timetable-date {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn,
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .3rem;
+    padding: .5rem;
+}
+
+.calendar {
+    text-decoration: underline;
+}
+
+.calendar:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.timetable-intervals {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.btn {
+    border: 1px solid var(--bg-second);
+    border-radius: 10px;
+
+}
+
+.btn:hover {
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+
+.timetable-footer {
+    margin: 1rem 0 .5rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.timetable-footer button {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--bg-second);
+}
+
+.timetable-footer button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.timetable-container div.btn-selected,
+.timetable-container div.btn-selected:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+hr {
+    border-bottom: var(--color-hover);
+}

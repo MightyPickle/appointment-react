@@ -1,0 +1,15 @@
+.list {
+    position: absolute;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    background-color: var(--bg-main);
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.year-picker.list {
+    overflow: auto;
+}

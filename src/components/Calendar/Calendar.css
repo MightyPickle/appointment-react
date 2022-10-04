@@ -1,0 +1,97 @@
+.calendar-container {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    background-color: var(--bg-body);
+    height: max-content;
+    width: min(100%, 22rem);
+    min-width: max-content;
+    border-radius: 10px;
+    border: var(--border-calendar);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.calendar-container span {
+    display: inline-block;
+    height: 2.5rem;
+    border-radius: 4px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.calendar-header span {
+    display: grid;
+    align-items: center;
+    padding: 0 .8rem;
+}
+
+.calendar-header span:hover {
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+
+.calendar-body {
+    font-size: 1.1rem;
+    padding: 0 .8rem;
+}
+
+.calendar-body span {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.calendar-weekday,
+.calendar-day {
+    margin: .75rem 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .25rem;
+}
+
+.calendar-weekday {
+    font-weight: 600;
+}
+
+.calendar-day>span:hover {
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+
+.calendar-day span.curr-date,
+.calendar-day span.curr-date:hover {
+    border: var(--border-day);
+}
+
+.calendar-footer {
+    padding: 0 1rem;
+}
+
+.calendar-footer>button {
+    padding: .5rem;
+    min-width: fit-content;
+    border-radius: 4px;
+    background-color: var(--bg-body);
+    border: var(--border-day);
+    width: 50%
+}
+
+.calendar-footer>button:hover{
+    cursor: pointer;
+    background-color: var(--green);
+    border: var(--border-calendar);
+    color: var(--white);
+}
+
+.calendar-container span.selected,
+.calendar-container span.selected:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}

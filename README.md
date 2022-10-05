@@ -1,3 +1,3 @@
-# calendar-react
+# appointment-react
 ### Запуск
 `npm start`
